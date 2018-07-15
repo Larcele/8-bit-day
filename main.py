@@ -6,7 +6,7 @@ import shutil
 import time
 
 #set the PATH to where all your BitDay images are
-PATH = 				"/home/larcele/PycharmProjects/bgChanger/"
+PATH = 				"[path_to_wallpapers]"
 
 #the currently set wallpaper
 CURRENT = 			"current.png"
@@ -66,4 +66,4 @@ elif  2 <= time <= 3:
 
 # Set the background image
 os.system("gsettings set org.cinnamon.desktop.background picture-uri \"file:///" + PATH + CURRENT + "\"")
-print("OK")
+print("Wallpaper changed.")
