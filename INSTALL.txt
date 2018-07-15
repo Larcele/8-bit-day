@@ -1,0 +1,21 @@
+----Make sure you have Python3 installed----
+
+
+==========================================
+SHORT instructions:
+open the main.py file and set the PATH variable to where all the files associated with this project are
+(i.e "/home/[username]/Documents.../")
+edit your crontab file to periodically run the script once an hour or two, as well as making the script run at startup, and you are done.
+
+
+==========================================
+DETAILED instructions:
+open the main.py file and set the PATH variable to where all the files associated with this project are
+(i.e "/home/[username]/Documents.../"). This enables the script to manipulate with the wallpaper images and setting the background.
+
+Then, you need to set the script to be run periodically to change your BitDay wallpaper. From the terminal type "crontab -e". This will enable you to edit the contab file. The two lines you need to put at the end of the file are the following:
+0 * * * * [python_location] [script_file_path]
+@reboot [script_file_path]
+
+where [python_location] is the path where python is installed on your machine (usually should be /usr/bin/python) and [script_file_path] is the full path to where your script is located (/home/[username]/.../main.py).
+The first line makes the script run each hour, the second line ensures the script runs at startup.
